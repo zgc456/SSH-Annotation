@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.zheng.entity.Questions" table="questions"  schema="questionnaire" >
+       <id name="id" column="id">
+           <generator class="identity"/>
+       </id>
+        <property name="title" column="title"></property>
+        <property name="ctailDate" column="ctailDate"></property>
+        <property name="answercount" column="answercount"></property>
+        <property name="lastModified" column="lastModified"></property>
+    </class>
+    <class name="com.zheng.entity.Answers" table="answers"  schema="questionnaire">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="ansContent" column="ansContent"></property>
+        <property name="ansDate" column="ansDate"></property>
+        <property name="qid" column="qid"></property>
+    </class>
+</hibernate-mapping>
